@@ -58,6 +58,8 @@
         <h2 class="carrossel__titulo">Novos lançamentos</h2>
         <!-- Slider main container -->
         <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -72,15 +74,25 @@
                 <div class="swiper-slide"><img src="/assets/Liderança.svg"
                         alt="Livro Liderança Em Design da Alura books"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+        </div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+        <div class="card">
+            <!--Primeira linha-->
+            <div class="card__descricao">
+                <!--Primeira coluna-->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <!--Segunda coluna-->
+                <img src="/assets/Angular.svg" alt="Livro Angular 11 e Firebase da Alura books"
+                    class="descricao__imagem">
+            </div>
         </div>
     </section>
 
@@ -89,6 +101,10 @@
         const swiper = new Swiper('.swiper', {
             spaceBetween: 10,
             slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
         });
     </script>
 </body>
